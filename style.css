@@ -1,0 +1,442 @@
+/* ================================
+   Green Earth Initiative Styles
+   ================================ */
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F5F5F5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header + Navigation */
+header {
+    background-color: #2E8B57;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* This ensures the main h1 is not centered when outside the header */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header h1 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    margin: 5px 0;
+}
+
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1508780709619-79562169bc64') 
+                no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.cta-buttons a, 
+input[type="submit"], 
+button, 
+.donate-btn {
+    background-color: #ffffff;
+    color: #2E8B57;
+    padding: 12px 25px;
+    margin: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cta-buttons a:hover, 
+input[type="submit"]:hover, 
+button:hover, 
+.donate-btn:hover {
+    background-color: #2E8B57;
+    color: white;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: white;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.stat-box {
+    flex: 1;
+    min-width: 200px;
+    margin: 15px;
+    padding: 20px;
+    background: #F5F5F5;
+    border-radius: 8px;
+    box-shadow: inset 0px 1px 4px rgba(0,0,0,0.1);
+}
+
+.stat-box h3 {
+    font-size: 2rem;
+    color: #2E8B57;
+}
+
+/* Forms */
+form {
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin: 8px 0 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+form textarea {
+    height: 120px;
+}
+
+/* Blog List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 15px 0;
+}
+
+ul li a {
+    color: #2E8B57;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #2E8B57;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Donation Images Gallery */
+.donation-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.donation-images img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+}
+
+/* Styles moved from about.html */
+.about-section {
+    background: url('https://images.unsplash.com/photo-1503264116251-35a269479413') no-repeat center center/cover;
+    color: white;
+    position: relative;
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6); /* dark overlay for readability */
+    border-radius: 12px;
+}
+
+.about-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+.about-section ul {
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.team-photos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.team-photos img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 10px;
+    border: 3px solid white;
+}
+
+/* Donate Section with background */
+.donate-section {
+    background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e') no-repeat center center/cover;
+    color: white;
+    position: relative;
+}
+
+.donate-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6); /* dark overlay for readability */
+    border-radius: 12px;
+}
+
+.donate-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+.donate-section ul {
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Impact Section with background */
+.impact {
+    background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') no-repeat center center/cover;
+    color: white;
+    position: relative;
+}
+
+.impact::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5); /* dark overlay */
+    border-radius: 12px;
+}
+
+.impact > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Blog Section with background */
+.blog {
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+    color: white;
+    position: relative;
+}
+
+.blog::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5); /* dark overlay */
+    border-radius: 12px;
+}
+
+.blog > * {
+    position: relative;
+    z-index: 1;
+}
+
+.blog a {
+    color: #fff;
+}
+
+/* Volunteer Section with background */
+.volunteer-section {
+    background: url('https://images.unsplash.com/photo-1618225413201-3363c8342458') no-repeat center center/cover;
+    color: white;
+    position: relative;
+}
+
+.volunteer-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6); /* dark overlay */
+    border-radius: 12px;
+}
+
+.volunteer-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Contact Section with background */
+.contact-section {
+    background: url('https://images.unsplash.com/photo-1501854140801-50d01698950b') no-repeat center center/cover;
+    color: white;
+    position: relative;
+}
+
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5); /* dark overlay */
+    border-radius: 12px;
+}
+
+.contact-section > * {
+    position: relative;
+    z-index: 1;
+}
+/* ================================
+   Green Earth Initiative - Main Stylesheet
+   ================================ */
+
+/* Import All CSS Files */
+@import url('base.css');
+@import url('layout.css');
+@import url('components.css');
+@import url('sections.css');
+@import url('responsive.css');
+
+/* ================================
+   Additional Global Styles
+   ================================ */
+
+/* Skip to Main Content Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 8px;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    z-index: 10000;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: var(--white);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}

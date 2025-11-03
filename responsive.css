@@ -1,0 +1,264 @@
+/* ================================
+   Responsive Design & Media Queries
+   ================================ */
+
+/* Tablet Devices (768px and below) */
+@media screen and (max-width: 768px) {
+    /* Header & Navigation */
+    header {
+        padding: var(--space-md);
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav {
+        margin-top: var(--space-md);
+        justify-content: center;
+        width: 100%;
+    }
+    
+    nav a {
+        margin: var(--space-xs);
+        padding: var(--space-sm);
+        font-size: 0.9rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 3rem var(--space-md);
+    }
+    
+    /* Button Groups */
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-group .btn {
+        width: 200px;
+    }
+    
+    /* Sections */
+    .section {
+        margin: var(--space-md);
+        padding: var(--space-xl) var(--space-md);
+    }
+    
+    .section-with-bg {
+        margin: var(--space-md);
+    }
+    
+    /* Grid Adjustments */
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: var(--space-md);
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: var(--space-md);
+    }
+    
+    .team-photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    /* Cards */
+    .card {
+        padding: var(--space-md);
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media screen and (max-width: 480px) {
+    :root {
+        font-size: 14px;
+    }
+    
+    /* Header & Mobile Navigation */
+    header {
+        flex-direction: column;
+        position: relative;
+    }
+    
+    nav {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: var(--space-md);
+    }
+    
+    nav.show {
+        display: flex;
+    }
+    
+    nav a {
+        margin: var(--space-xs) 0;
+        padding: var(--space-md);
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: var(--radius-sm);
+        width: 100%;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        top: var(--space-md);
+        right: var(--space-md);
+    }
+    
+    /* Typography Adjustments */
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Grid Systems */
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-card {
+        padding: var(--space-lg);
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .team-photo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    /* Forms */
+    .form-group {
+        margin-bottom: var(--space-md);
+    }
+    
+    form {
+        padding: 0 var(--space-sm);
+    }
+    
+    /* Button Adjustments */
+    .btn {
+        min-width: 100%;
+        padding: 0.875rem 1rem;
+    }
+    
+    /* Container Padding */
+    .container {
+        padding: 0 var(--space-sm);
+    }
+}
+
+/* Large Desktop Screens (1200px and above) */
+@media screen and (min-width: 1200px) {
+    .section {
+        margin: var(--space-xl) auto;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 900px;
+        margin: var(--space-xl) auto;
+    }
+    
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* Extra Large Screens (1400px and above) */
+@media screen and (min-width: 1400px) {
+    :root {
+        font-size: 18px;
+    }
+    
+    .hero {
+        padding: 10rem var(--space-md);
+    }
+}
+
+/* High DPI/Retina Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero,
+    .about-section,
+    .donate-section,
+    .impact-section,
+    .blog-section,
+    .volunteer-section,
+    .contact-section {
+        background-attachment: fixed;
+    }
+}
+
+/* Print Styles */
+@media print {
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    .hero,
+    .btn-group,
+    nav,
+    footer,
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    a::after {
+        content: " (" attr(href) ")";
+    }
+    
+    .section {
+        margin: 0;
+        padding: 1rem 0;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --secondary-color: #1a1a1a;
+        --text-color: #e9ecef;
+        --text-light: #adb5bd;
+        --white: #1a1a1a;
+        --gray-light: #343a40;
+    }
+    
+    .card,
+    .section {
+        background-color: #2d2d2d;
+        color: var(--text-color);
+    }
+}

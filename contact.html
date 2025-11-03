@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Green Earth Initiative - Get in Touch</title>
+    <meta name="description" content="Contact Green Earth Initiative. Send us your questions, suggestions, or partnership inquiries. We're here to help create a sustainable future.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="contact environmental organization, sustainability questions, climate change inquiry, green initiative contact">
+    <meta name="author" content="Green Earth Initiative">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Green Earth Initiative">
+    <meta property="og:description" content="Get in touch with Green Earth Initiative. Join our mission for a sustainable planet.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://greenearthinitiative.org/contact.html">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="sections.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Green Earth Initiative",
+        "url": "https://greenearthinitiative.org",
+        "logo": "https://greenearthinitiative.org/images/logo.png",
+        "description": "Community-driven environmental action for a sustainable future",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Green Street",
+            "addressLocality": "Johannesburg",
+            "addressCountry": "South Africa"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+27-123-456-789",
+            "contactType": "customer service",
+            "email": "info@greenearthinitiative.org"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Green Earth Initiative</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="donate.html">Donate</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="enquiry.html">Enquire</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section section-with-bg">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p class="section-intro">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Get In Touch</h2>
+                        <div class="contact-detail">
+                            <strong>Email:</strong>
+                            <a href="mailto:info@greenearthinitiative.org">info@greenearthinitiative.org</a>
+                        </div>
+                        <div class="contact-detail">
+                            <strong>Phone:</strong>
+                            <a href="tel:+27123456789">+27 123 456 789</a>
+                        </div>
+                        <div class="contact-detail">
+                            <strong>Address:</strong>
+                            <address>123 Green Street, Johannesburg, South Africa</address>
+                        </div>
+                        <div class="contact-detail">
+                            <strong>Office Hours:</strong>
+                            <p>Monday - Friday: 9:00 AM - 5:00 PM<br>
+                            Saturday: 10:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h2>Send Us a Message</h2>
+                       <form name="contactForm" id="contactForm" action="php/contact-form.php" method="POST" data-validate novalidate></form>
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required minlength="2" 
+                                       placeholder="Enter your full name">
+                                <div class="field-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required 
+                                       placeholder="your.email@example.com">
+                                <div class="field-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" 
+                                       placeholder="+27 123 456 789">
+                                <div class="field-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                    <option value="volunteer">Volunteer Information</option>
+                                    <option value="donation">Donation Question</option>
+                                    <option value="media">Media Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="field-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" required minlength="10" 
+                                          placeholder="Tell us how we can help you..." 
+                                          rows="6"></textarea>
+                                <div class="field-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <label for="newsletter">Subscribe to our newsletter for updates and environmental tips</label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <span class="loading"></span> Sending...
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="container">
+                <h2>Find Us</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.228333084338!2d28.0439846150299!3d-26.15694478345922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c688034048d%3A0x7a5b3b8b9c9b2b1a!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1635886000000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="sitemap">
+                    <h3>Sitemap</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="enquiry.html">Enquire</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <h3>How quickly do you respond to messages?</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We typically respond within 24-48 hours during business days. For urgent matters, please call our office directly.</p>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <h3>Do you offer school presentations or workshops?</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes! We offer educational workshops for schools and community groups. Contact us to discuss your specific needs.</p>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <h3>Can I schedule a meeting with your team?</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Absolutely! We welcome meetings with potential partners, volunteers, and community members. Please use the form above to request a meeting.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Green Earth Initiative | All Rights Reserved</p>
+            <p>
+                <a href="#">Facebook</a> | 
+                <a href="#">Twitter</a> | 
+                <a href="#">Instagram</a> |
+                <a href="#">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <!-- Google Maps API (replace with your API key) -->
+    
+</body>
+</html>

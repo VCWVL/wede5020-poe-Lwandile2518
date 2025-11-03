@@ -1,0 +1,177 @@
+/* ================================
+   Page-Specific Sections
+   ================================ */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1508780709619-79562169bc64') 
+                no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: clamp(4rem, 10vw, 8rem) var(--space-md);
+    margin: 0;
+    border-radius: 0;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: var(--space-lg);
+    line-height: 1.2;
+    color: var(--white);
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    margin-bottom: var(--space-xl);
+    opacity: 0.9;
+}
+
+/* Section Backgrounds with Overlay */
+.section-with-bg {
+    position: relative;
+    color: var(--white);
+    margin: var(--space-lg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.section-with-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    border-radius: var(--radius-lg);
+}
+
+.section-with-bg > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Specific Section Backgrounds */
+.about-section {
+    background: url('https://images.unsplash.com/photo-1503264116251-35a269479413') no-repeat center center/cover;
+}
+
+.donate-section {
+    background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e') no-repeat center center/cover;
+}
+
+.impact-section {
+    background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') no-repeat center center/cover;
+}
+
+.blog-section {
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+}
+
+.volunteer-section {
+    background: url('https://images.unsplash.com/photo-1618225413201-3363c8342458') no-repeat center center/cover;
+}
+
+.contact-section {
+    background: url('https://images.unsplash.com/photo-1501854140801-50d01698950b') no-repeat center center/cover;
+}
+
+/* Blog Styles */
+.blog-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.blog-item {
+    margin: var(--space-lg) 0;
+    padding: var(--space-lg);
+    background: var(--secondary-color);
+    border-radius: var(--radius-md);
+    transition: var(--transition-normal);
+    text-align: left;
+}
+
+.blog-item:hover {
+    transform: translateX(10px);
+    background: rgba(46, 139, 87, 0.1);
+}
+
+.blog-link {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.blog-link:hover {
+    text-decoration: underline;
+}
+
+/* Impact Stats */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+/* Donation Section */
+.donation-features {
+    text-align: left;
+    max-width: 600px;
+    margin: var(--space-xl) auto;
+}
+
+.donation-features li {
+    margin: var(--space-md) 0;
+    padding-left: var(--space-md);
+    position: relative;
+}
+
+.donation-features li::before {
+    content: "✓";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-bottom: var(--space-xl);
+}
+
+.contact-detail {
+    margin: var(--space-md) 0;
+    font-size: 1.1rem;
+}
+
+/* Utility Sections */
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+.pt-0 { padding-top: 0; }
+.pb-0 { padding-bottom: 0; }

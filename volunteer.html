@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer | Green Earth Initiative</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="sections.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        function validateForm() {
+            // Let's grab the values from the name and email fields.
+            let name = document.forms["volunteerForm"]["name"].value;
+            let email = document.forms["volunteerForm"]["email"].value;
+            
+            // We'll check if either the name or email field is empty.
+            if (name == "" || email == "") {
+                // If they are, we'll pop up a friendly alert message and stop the form from submitting.
+                alert("Oops! Please fill in all the required fields.");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Green Earth Initiative</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="donate.html">Donate</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="enquiry.html">Enquire</a>
+        </nav>
+    </header>
+
+    <section class="volunteer-section">
+        <h2>Become a Volunteer</h2>
+        <p>Join our community of eco-warriors! Fill in the form below to register. 🌳</p>
+        
+        <form name="volunteerForm" onsubmit="return validateForm()">
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            
+            <label for="interest">Area of Interest:</label><br>
+            <input type="text" id="interest" name="interest"><br><br>
+            
+            <input type="submit" value="Register">
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Green Earth Initiative | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

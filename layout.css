@@ -1,0 +1,145 @@
+/* ================================
+   Layout & Grid Systems
+   ================================ */
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    padding: var(--space-md) var(--space-xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    color: var(--white);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin: var(--space-sm) 0;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+nav a {
+    color: var(--white);
+    font-weight: bold;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: var(--space-sm);
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: var(--space-xl) var(--space-md);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: var(--space-xl) var(--space-md);
+    margin-top: auto;
+}
+
+footer a {
+    color: var(--white);
+    margin: 0 var(--space-sm);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Grid Systems */
+.grid {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Flexbox Utilities */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+/* Section Base */
+.section {
+    padding: clamp(var(--space-xl), 5vw, var(--space-xxl)) var(--space-md);
+    text-align: center;
+    background-color: var(--white);
+    margin: var(--space-lg) auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    max-width: 1200px;
+}
+
+.section-dark {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.section-dark h2 {
+    color: var(--white);
+}
